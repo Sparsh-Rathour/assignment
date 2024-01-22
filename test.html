@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Employee Details</title>
+  <link rel="stylesheet" href="test.css">
+</head>
+
+<body>
+  <style>
+    body {
+      background-image: url('one.jpg');
+    }
+  </style>
+  <script src="test.js"></script>
+  <div class="form-container">
+    <div class="forminput">
+      <input type="text" id="name" placeholder="Employee Name">
+      <input type="text" id="designation" placeholder="Designation">
+      <input type="text" id="department" placeholder="Department">
+      <input type="text" id="salary" placeholder="Salary">
+      <input type="text" id="avatar" placeholder="Avatar">
+    </div>
+    <div>
+      <button class="wide-button" onclick="createEmployee()">ADD</button>
+    </div>
+  </div>
+  <div id="employeesDiv"></div>
+  <table id="employeesTable">
+    <thead>
+      <tr>
+        <th>Avatar</th>
+        <th>Employee Name</th>
+        <th>Designation</th>
+        <th>Department</th>
+        <th>Salary</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody id="employeesBody">
+    </tbody>
+  </table>
+  <form id="editEmployeeModal" class="modal">
+    <div class="modal-content">
+      <button onclick="closebtn()" type="button" class="close">&times;</button>
+      <div id="editEmployeeForm">
+        <fieldset>
+          <legend>Edit Employee</legend>
+
+          <div>
+            <label for="name">id:</label>
+            <input disabled type="text" id="id" >
+          </div>
+          <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+          </div>
+          <div>
+            <label for="name">Designation:</label>
+            <input type="text" id="designation" name="designation">
+          </div>
+          <div>
+            <label for="name">Department:</label>
+            <input type="text" id="department" name="department">
+          </div>
+          <div>
+            <label for="name">Salary:</label>
+            <input type="number" id="salary" name="salary">
+          </div>
+
+          <div>
+            <label for="name">Avatar:</label>
+            <input type="text" id="Avatar" name="Avatar">
+          </div>
+
+          <button type="button" onclick="updatedata(document.getElementById('designation').value)" id="submitForm" >Update Employee</button>
+        </fieldset>
+      </div>
+    </div>
+  </form>
+</body>
+
+</html>
